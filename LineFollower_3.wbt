@@ -1,0 +1,309 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material1 "rubber"
+      coulombFriction [
+        1.8
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.17450876673417248 -0.10388159967253426 -0.9791605096113678 4.756526872387995
+  position 1.4243955247100264 -0.33466292500357187 0.2102452244899897
+}
+Solid {
+  translation 0 -0.03 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/op.png"
+          ]
+          repeatT FALSE
+          filtering 1
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 4 4 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 5 5 0.11
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation 1.3414815013703703 0.3522516511717114 0.056081368617135384
+  rotation -0.0008073107851377136 0.018262302713903545 0.9998329043139569 -2.743274835081315
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1196.9758904309697
+        anchor 0.080108 0.0665542 -0.00387742
+      }
+      device [
+        RotationalMotor {
+          name "left_motor"
+          maxVelocity 30
+        }
+      ]
+      endPoint Solid {
+        translation 0.08049106400004424 0.06670454035987687 -0.004184255892427361
+        rotation -0.6100468435669261 0.498235281000156 0.6161204861232306 4.082412904676336
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.03
+              radius 0.01
+            }
+          }
+        ]
+        name "left_wheel"
+        boundingObject Cylinder {
+          height 0.03
+          radius 0.01
+        }
+        physics Physics {
+          mass 10
+        }
+        linearVelocity -0.023068101645244102 0.05453736321876962 0.00014213353778945868
+        angularVelocity -5.525027712164488 -2.3287326864182534 0.035261650159815
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -492.536628180123
+        anchor -0.0799529 0.0680443 -0.00307977
+      }
+      device [
+        RotationalMotor {
+          name "right_motor"
+          consumptionFactor 0
+          maxVelocity 30
+        }
+      ]
+      endPoint Solid {
+        translation -0.07983909398467981 0.06795198821698063 -0.00344607568939677
+        rotation -0.697257313726135 0.16597994118121456 0.6973398723584465 3.472613154153095
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.03
+              radius 0.01
+            }
+          }
+        ]
+        name "right_wheel"
+        boundingObject Cylinder {
+          height 0.03
+          radius 0.01
+        }
+        physics Physics {
+          mass 10
+        }
+        linearVelocity -0.022913598329347237 0.0546881582931679 -0.00041416155598421854
+        angularVelocity -5.522908949681359 -2.3336645415471815 0.040394619310838265
+      }
+    }
+    Solid {
+      translation 0.00257611 0.0063896 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.14 0.12 0.02
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.14 0.12 0.012
+      }
+      physics Physics {
+      }
+    }
+    DistanceSensor {
+      translation -0.003 -0.06 3.3671e-08
+      rotation 0 1 0 1.5707996938995747
+      name "s7"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.003 -0.03 3.3671e-08
+      rotation 0 1 0 1.5707996938995747
+      name "s15"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.01 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s6"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.017 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s5"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.024 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s4"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.031 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s3"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.038 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s2"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.045 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s1"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.052 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s0"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.046 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s14"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.039 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s13"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.032 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s12"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.025 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s11"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.018 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s10"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.011 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s9"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.004 -0.06 0
+      rotation 0 1 0 1.5708
+      name "s8"
+      model "infra_red"
+      lookupTable [
+        0 0 0
+        0.02 1000 0
+      ]
+      type "infra-red"
+    }
+  ]
+  physics Physics {
+    density -1
+    mass 18
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controller "my_controller9"
+  linearVelocity -0.023959349247670247 0.056351489108202084 0.000178299400823647
+  angularVelocity 0.0062692716877256645 -0.004148353619165768 0.003016609891686671
+}
